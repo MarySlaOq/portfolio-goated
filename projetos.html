@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/shrimp2.png">
+
+    <script>
+
+      function openAcc(index) {
+        // Este script recebe um indice de acordeão, sendo 0 o primeiro, 1 o segundo, etc etc
+        // E para todos os acordeões de bootstrap neste documento ativa o que foi selecionado de modo automatico
+        
+        // Pega em todos os objectos de botão dos acordiões e guarda-os numa lista
+        const projects = [...document.getElementsByClassName("accordion-button")];
+        // Pega em todos os corpos de texto dos acordiões e guarda-os numa lista
+        const bodies = [...document.getElementsByClassName("accordion-collapse")];
+
+        // Para cada botão salvo na lista define o como colapsado, isto é esconde a cor azul da selecção
+        projects.filter(p => !p.className.includes("collapsed")).forEach(p => p.className += " collapsed")
+        // Para cada corpo de texto salvo na lista define o como invisivel, isto é esconde o texto completamente
+        bodies.forEach(p => p.className = p.className.replace("show", ""))
+
+        // Agora que todos os elementos estão definidos como inativos, ativamos o elemento desejado
+        
+        // define o botão do elemento que foi selecionado como ativo, isto é pinta-o de azul
+        projects[index].className = projects[index].className.replace("collapsed", "");
+        // define o corpo do texto que foi seleciona como ativo, isto é mostra-o ao utilizador
+        bodies[index].className = bodies[index].className + " show";
+
+        // Automaticamente faz scroll até ao corpo selecionado
+        bodies[index].scrollIntoView();
+      }
+    </script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <img class="icon" src="img/shrimp2.png" alt="logotipo do site, icone de um camarão">
+        <a class="navbar-brand" href="index.html">Maria Xavier</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="projetos.html">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactos.html">Contactos</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" class="nav-link" href="img/Curriculo estágio.pdf"> <i class="fa fa-link"></i> CV</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <br>
+
+    <div class="col-md-12">
+      <div class="section-header text-center pb-5">
+        <br>
+        <h2>Ferramentas</h2>
+        <p>Ferramentas e tecnologias que são utilizadas nos meus projetos</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <h4 class="title">Tecnologias web</h4>
+      <div class="w-flex justify-content-md-center m-50">
+        <img class="icon seperate" src="img/html.png">
+        <img class="icon seperate" src="img/css.png">
+        <img class="icon seperate" src="img/js.png">
+        <img class="icon seperate" src="https://pngimg.com/d/php_PNG35.png">
+        <img class="icon seperate" src="img/boot-logo.png">
+        <img class="icon seperate" src="img/vscode.png">
+      </div>
+      
+      <h4 class="title">Ilustração e design</h4><br>
+      <div class="w-flex justify-content-md-center m-50">
+        <img class="icon seperate" src="img/logo-clip.png">
+        <img class="icon seperate" src="https://play-lh.googleusercontent.com/QcfhlXm32JDnj3WM2-TSL78ad99x4slovX4OzCSLSPU3uRN-mGXpKyM_yeXiewhz0Lk">
+        <img class="icon seperate" src="img/pts.png">
+        <img class="icon seperate" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Adobe_Illustrator_CC_icon.svg/1200px-Adobe_Illustrator_CC_icon.svg.png">
+        <img class="icon seperate" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/1200px-Adobe_Photoshop_CC_icon.svg.png">
+        <img class="icon seperate" src="data:image/png;base64,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">
+        <img class="icon seperate" src="data:image/png;base64,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">
+        <img class="icon seperate" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Adobe_Character_Animator_icon_%282020%29.svg/1200px-Adobe_Character_Animator_icon_%282020%29.svg.png">
+        <img class="icon seperate" src="https://seeklogo.com/images/1/3ds-max-logo-9B624BE04F-seeklogo.com.png">
+      </div>
+
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h2>Projetos</h2>
+            <p>Alguns dos projetos em que participei e contribuí</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card-group">
+          <div class="card">
+            <div class="card-body text-center">
+              <h3 class="card-title"> Sabores do Sol </h3>
+              <p class="card-text">O meu Projeto de Aptidão Profissional (PAP) do ensino secundário</p>
+              <button onclick="openAcc(0)" class="btn btn-outline-primary">Ler mais</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body text-center">
+              <h3 class="card-title">The Character Archive</h3>
+              <p class="card-text">Uma aplicação desenvolvida para o armazenamento e criação de personagens e mundos ficcionais</p>
+              <button onclick="openAcc(1)" class="btn btn-outline-primary">Ler mais</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body text-center">
+              <h3 class="card-title"> Rumble </h3>
+              <p class="card-text">Uma animação feita em grupo para a Mad Games Jam de 2024 da ESMAD</p>
+              <button onclick="openAcc(2)" class="btn btn-outline-primary">Ler mais</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <br>
+        
+
+        <div class="row">
+
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapseTwo">
+                  Sabores do Sol
+                </button>
+              </h2>
+              <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="row">
+                  <div class="col-sm">
+                    <h2>Sabores do Sol</h2>
+                    <p>Uma pastelaria fictícia que usa plantas comestíveis como o seu principal meio de decoração de bolos.</p>
+                    <p>Foi criada para o <strong>Projeto de Aptidão Profissional</strong> para o meu ano final no Colégio de Gaia.</p>
+                    <p>Para este projeto foram criados diversos conteúdos e informações como um logotipo totalmente original e um website independente que funciona através da linguagem de programação PHP.</p>
+                    <a href="https://github.com/MarySlaOq/saboressol" class="btn btn-secondary"><i class="fab fa-github"></i> Código fonte</a>
+                  </div>
+                  <div class="col-sm">
+                    <br>
+                    <img class="img-fluid" src="img/sabores-sol.png" alt="" srcset="">
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  The Character archive
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="row">
+
+                  <div class="col-sm">
+
+                    <h2>The character arquive</h2>
+                    <p>Este projecto consiste num aplicação web JavaScript com uma pequena base de dados. </p>
+                    <p>É uma <strong>ferramenta de escrita</strong> direcionada a armazenar e relacionar personagens de historias criadas pelo utilizador</p>
+                    <p>Além de personagens, outros aspectos caracterizadores do mundo podem também ser definidos, como a geografia do mundo, um calendario de eventos do mundo, e uma linha temporal de eventos.</p>
+
+                    <a href="https://chara-archive.web.app/" class="btn btn-primary"><i class="fa fa-globe"></i> Página web</a>
+                    <a href="https://github.com/MarySlaOq/character-archive" class="btn btn-secondary"><i class="fab fa-github"></i> Código fonte</a>
+
+                  </div>
+
+                  <div class="col-sm">
+
+                    <br>
+                    <img class="img-fluid" src="img/character-archive.png" alt="" srcset="">
+
+                  </div>
+
+                </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+                  Rumble
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+
+                  <div class="row">
+
+                  <div class="col-sm">
+
+                    <h2>Rumble</h2>
+                    <p>A animação Rumble foi uma animação feita <strong>em grupo</strong> entre mim e mais dois colegas da licenciatura de multimédia.</p>
+                    <p>Com Edgar Carneiro e Tomás Sarreira, tivemos o intuito de participar da edição de 2024 da Mad Games Jam, então tem um tema relacionado com jogos de vídeo sobre aventura.</p>
+
+                    <a href="https://www.youtube.com/watch?v=7z25ZZ3DHds" class="btn btn-primary"></i>Música original</a>
+
+                  </div>
+
+                  <div class="col-sm">
+                    <br>
+
+                    <video class="embed-responsive embed-responsive-16by9" controls>
+                      <source src="img/rumble.mp4" type="video/mp4" />
+                    </video>
+
+                  </div>
+
+                </div>
+
+                </div>
+              </div>
+            </div>
+
+            <br>
+            <br><br>
+        </div>
+
+        
+      </div>
+    </div>
+      
+    <br>
+    <footer class="bg-dark p-2 text-center">
+      <div class="container">
+        <p class="text-white">Todos os direitos Reservados @Maria Xavier</p>
+        <div class="icon-group">
+          <a href="https://twitter.com/ghostyshrimp" class="btn text-white" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+          <a href="https://www.instagram.com/ghosty.shrimp" class="btn text-white" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+          <a href="https://github.com/MarySlaOq" class="btn text-white" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+          <a href="#" class="btn text-white" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg></a>
+          <a href="https://www.behance.net/mariaxarodrigu" class="btn text-white" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-behance" viewBox="0 0 16 16">
+            <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z"/></svg></a>
+          <a href="https://www.linkedin.com/in/maria-xavier-rodrigues-105377244/" class="btn text-white" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg></a>
+        </div>
+      </div>
+    </footer>
+    <!--  Javascipt Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
